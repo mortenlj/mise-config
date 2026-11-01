@@ -18,6 +18,9 @@ login_shell = "bash"
 "flatpak:bitwarden" =  { version = "latest", os = "linux" }
 
 [bootstrap.repos]
+"~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
+"~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
+"~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
 
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
