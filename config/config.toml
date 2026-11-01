@@ -6,10 +6,11 @@ login_shell = "bash"
 
 [bootstrap.packages]
 "brew:bash" = { version = "latest", os = "macos" }
+"apt:flatpak" = { version = "latest", os = "linux" }
 
 # Bitwarden Desktop App
 "brew-cask:bitwarden" =  { version = "latest", os = "macos" }
-"flatpak:bitwarden" =  { version = "latest", os = "macos" }
+"flatpak:bitwarden" =  { version = "latest", os = "linux" }
 
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
@@ -78,7 +79,6 @@ cargo-binstall = "latest"
 delta = "latest"
 krew = "latest"
 
-
 [tools."github:mortenlj/bootdns"]
 version = "latest"
 minimum_release_age = "1s"
@@ -87,7 +87,6 @@ os = ["linux"]
 [tools."github:navikt/cplt"]
 version = "latest"
 minimum_release_age = "1s"
-
 
 [settings]
 experimental = true
