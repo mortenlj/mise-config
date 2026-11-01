@@ -5,8 +5,12 @@ builtin = "history-watch"
 login_shell = "bash"
 
 [bootstrap.packages]
+# MacOS
 "brew:bash" = { version = "latest", os = "macos" }
+
+# Linux
 "apt:flatpak" = { version = "latest", os = "linux" }
+"apt:git" = { version = "latest", os = "linux" }
 
 # Bitwarden Desktop App
 "brew-cask:bitwarden" =  { version = "latest", os = "macos" }
