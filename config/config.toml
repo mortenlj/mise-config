@@ -145,7 +145,7 @@ uvx = true
 compile = false
 
 [settings.github]
-credential_command = "~/.local/share/mise/shims/gh auth token"
+credential_command = "gh auth token"
 use_git_credentials = true
 
 [dotfiles]
