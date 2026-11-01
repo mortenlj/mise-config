@@ -1,0 +1,3 @@
+[tools]
+"github:gjensidige/gjcli" = "latest"
+"github:gjensidige/gap-api" = "latest"

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Add mise-lib to the repo using git submodule"
+#MISE dir="{{cwd}}"
+
+touch mise.toml
+mise trust
+mise config set task_config.includes --type list ".config/mise-lib/virtual_tasks.toml,.config/mise-lib/tasks"
+
+git submodule add git@github.com:mortenlj/mise-lib.git ".config/mise-lib"
+
+git add mise.toml

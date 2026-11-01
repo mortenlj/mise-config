@@ -1,0 +1,192 @@
+#!/usr/bin/env python
+# [MISE] description="Initialize a mise project"
+# [MISE] dir="{{cwd}}"
+# [MISE] depends=["presets:add-mise-lib"]
+# [USAGE] arg "<name>" help="Name of project"
+# [USAGE] arg "[language]" help="Project language" {
+# [USAGE]   choices "python" "rust"
+# [USAGE] }
+import os
+import subprocess
+from dataclasses import dataclass
+from typing import Iterable, List, Optional
+
+
+class Language:
+    """No specific language selected"""
+
+    def initialize(self) -> Iterable[List[str]]:
+        """Returns an iterable of commands to use when setting up project"""
+        return []
+
+    def prep_project_name(self, project_name):
+        """Make any adjustments to project name before use"""
+        return project_name
+
+    def depends(self, task_name) -> Iterable[str]:
+        for task in self._depends_on(task_name):
+            yield "--depends"
+            yield task
+
+    def _depends_on(self, task_name) -> Iterable[str]:
+        return []
+
+    def sources(self, project_name) -> Iterable[str]:
+        for pattern in self._source_patterns(project_name):
+            yield "--sources"
+            yield pattern
+
+    def _source_patterns(self, project_name):
+        return []
+
+    def build_outputs(self, project_name) -> Iterable[str]:
+        for target in self._build_outputs(project_name):
+            yield "--outputs"
+            yield target
+
+    def _build_outputs(self, project_name):
+        return []
+
+    def release_outputs(self, project_name) -> Iterable[str]:
+        for target in self._release_outputs(project_name):
+            yield "--outputs"
+            yield target
+
+    def _release_outputs(self, project_name):
+        return []
+
+
+class Python(Language):
+    def initialize(self):
+        return [
+            ["mise", "use", "python"],
+            ["mise", "use", "uv"],
+            ["mise", "set", 'VERSION=${MORTENLJ_MISE_LIB_CLEAN_VERSION:-0.1.0+develop}'],
+            ["mise", "config", "set", "settings.env_shell_expand=true"],
+        ]
+
+    def prep_project_name(self, project_name):
+        return project_name.replace("-", "_")
+
+    def _depends_on(self, task_name) -> Iterable[str]:
+        return [f"python:{task_name}"]
+
+    def _source_patterns(self, project_name) -> Iterable[str]:
+        return f"{project_name}/**/*.py", "ibidem/**/*.py", "src/**/*.py", "uv.lock", "pyproject.toml"
+
+    def _build_outputs(self, project_name):
+        return [f"dist/{project_name}-*.tar.gz", f"dist/{project_name}-*.whl"]
+
+    def _release_outputs(self, project_name):
+        return self._build_outputs(project_name)
+
+
+class Rust(Language):
+    def _depends_on(self, task_name) -> Iterable[str]:
+        return [f"rust:{task_name}"]
+
+    def _source_patterns(self, project_name) -> Iterable[str]:
+        return "src/**/*.rs", "Cargo.lock", "Cargo.toml"
+
+    def _build_outputs(self, project_name):
+        return [f"target/debug/{project_name}"]
+
+    def _release_outputs(self, project_name):
+        return [
+            f"target/release/{project_name}.*.aarch64-unknown-linux-musl",
+            f"target/release/{project_name}.*.armv7-unknown-linux-musleabihf",
+            f"target/release/{project_name}.*.x86_64-unknown-linux-musl",
+        ]
+
+
+@dataclass
+class Project:
+    name: str
+    language: Language
+
+    def initialize(self) -> Iterable[List[str]]:
+        yield from [
+            ["touch", "mise.toml"],
+            ["mise", "trust", "mise.toml"],
+        ]
+        yield from self.language.initialize()
+
+    def finalize(self) -> Iterable[List[str]]:
+        return []
+
+
+@dataclass
+class Task:
+    project: Project
+    name: str
+    description: str
+    _depends: Optional[List[str]] = None
+
+    @property
+    def depends(self):
+        if self._depends:
+            for dep in self._depends:
+                yield "--depends"
+                yield dep
+        else:
+            yield from self.project.language.depends(self.name)
+
+    @property
+    def sources(self):
+        return self.project.language.sources(self.project.name)
+
+    @property
+    def build_outputs(self):
+        return self.project.language.build_outputs(self.project.name)
+
+    @property
+    def release_outputs(self):
+        return self.project.language.release_outputs(self.project.name)
+
+    def make_command(self):
+        cmd = ["mise", "tasks", "add"]
+        cmd.extend(self.depends)
+        if self.name == "build":
+            cmd.extend(self.build_outputs)
+            cmd.extend(self.sources)
+        if self.name == "release-build":
+            cmd.extend(self.release_outputs)
+            cmd.extend(self.sources)
+        cmd.extend(["--description", self.description])
+        cmd.append(self.name)
+        return cmd
+
+
+def main(project_name, language_name):
+    if language_name == "python":
+        language = Python()
+    elif language_name == "rust":
+        language = Rust()
+    else:
+        language = Language()
+    project_name = language.prep_project_name(project_name)
+    project = Project(project_name, language)
+
+    tasks = (
+        Task(project, "test", "Run tests"),
+        Task(project, "fmt", "Format source"),
+        Task(project, "fmt-check", "Check formatting"),
+        Task(project, "lint", "Lint the project"),
+        Task(project, "lint-fix", "Run lint fixers"),
+        Task(project, "ci", "Run CI tasks", ["test", "fmt-check", "lint"]),
+        Task(project, "build", "Build the project in debug mode"),
+        Task(project, "release-build", "Build the project"),
+    )
+
+    for cmd in project.initialize():
+        subprocess.run(cmd, check=True)
+    for task in tasks:
+        subprocess.run(task.make_command(), check=True)
+    for cmd in project.finalize():
+        subprocess.run(cmd, check=True)
+
+
+if __name__ == '__main__':
+    project_name = os.getenv("usage_name")
+    language_name = os.getenv("usage_language")
+    main(project_name, language_name)
