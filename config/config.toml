@@ -23,8 +23,8 @@ login_shell = "bash"
 
 [bootstrap.directories."/usr/local/bin"]
 os = "linux"
-
-
+user = "root"
+group = "root"
 
 [bootstrap.files."/usr/local/bin/bw"]
 content = """#!/usr/bin/bash
