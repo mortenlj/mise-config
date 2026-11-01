@@ -8,13 +8,11 @@ login_shell = "bash"
 # MacOS
 "brew:bash" = { version = "latest", os = "macos" }
 "brew:git" = { version = "latest", os = "macos" }
+"brew-cask:bitwarden" =  { version = "latest", os = "macos" }
 
 # Linux
 "apt:flatpak" = { version = "latest", os = "linux" }
 "apt:git" = { version = "latest", os = "linux" }
-
-# Bitwarden Desktop App
-"brew-cask:bitwarden" =  { version = "latest", os = "macos" }
 "flatpak:bitwarden" =  { version = "latest", os = "linux" }
 
 [bootstrap.repos]
@@ -28,6 +26,9 @@ hide = true
 depends = [
     "bootstrap:*"
 ]
+
+[tasks."bootstrap:ansible-playbook"]
+
 
 [tools]
 # Kubernetes
