@@ -2,7 +2,7 @@
   "format": 1,
   "enrollment": [
     {
-      "path": "config/config.toml",
+      "path": "home/.config/mise",
       "autosave": true,
       "encrypt": false,
       "variants": []
