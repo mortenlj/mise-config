@@ -1,4 +1,6 @@
 [tasks."bootstrap:install-brew"]
+description = "Install brew so that normal brew operations works"
+hide = true
 run = """
 #!/usr/bin/env bash
 if [[ ! -f /opt/homebrew/bin/brew ]]; then
