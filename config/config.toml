@@ -45,7 +45,8 @@ depends = [
 [tasks."bootstrap:ansible-vault-password"]
 description = "Extract ansible vault-password from Bitwarden to disk"
 hide = true
-tools = { }
+tools = { jq = "latest" }
+shell = "bash"
 run = """
 
 """
