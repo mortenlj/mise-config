@@ -1,6 +1,16 @@
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
+[bootstrap.user]
+login_shell = "bash"
+
+[bootstrap.packages]
+"brew:bash" = { version = "latest", os = "macos" }
+
+# Bitwarden Desktop App
+"brew-cask:bitwarden" =  { version = "latest", os = "macos" }
+"flatpak:bitwarden" =  { version = "latest", os = "macos" }
+
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
 hide = true
