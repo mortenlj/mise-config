@@ -1,6 +1,13 @@
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
+[tasks.bootstrap]
+description = "Bootstrap a machine. Called at the end of mise bootstrap."
+hide = true
+depends = [
+    "bootstrap:*"
+]
+
 [tools]
 # Kubernetes
 "aqua:kubectl" = "1.37.1"
@@ -87,13 +94,6 @@ compile = false
 [settings.github]
 credential_command = "gh auth token"
 use_git_credentials = true
-
-[tasks.bootstrap]
-description = "Bootstrap a machine. Called at the end of mise bootstrap."
-hide = true
-depends = [
-    "bootstrap:*"
-]
 
 [dotfiles]
 "~/.config/mise/" = { mode = "track" }
