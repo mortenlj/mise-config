@@ -47,7 +47,7 @@ description = "Extract ansible vault-password from Bitwarden to disk"
 hide = true
 tools = { jq = "latest" }
 run = """#!/usr/bin/env bash
-
+bw login 
 """
 
 [tasks."bootstrap:ansible-playbook"]
