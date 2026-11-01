@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "enrollment": [
+    {
+      "path": "config/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    }
+  ],
+  "exclude": [],
+  "recipients": [],
+  "permissions": {}
+}

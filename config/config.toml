@@ -1,0 +1,99 @@
+[bootstrap.services.mise-history]
+builtin = "history-watch"
+
+[tools]
+# Kubernetes
+"aqua:kubectl" = "1.37.1"
+azure-kubelogin = "latest"
+kind = "latest"
+stern = "latest"
+kubectx = "latest"
+kubebuilder = "latest"
+kubeseal = "latest"
+helm = "latest"
+kubens = "latest"
+ctlptl = "latest"
+kubecolor = "latest"
+kubie = "latest"
+k9s = "latest"
+k3d = "latest"
+"github:purelb/purelb" = {version = "latest", matching = "kubectl-purelb", rename_exe = "kubectl-purelb"}
+
+# Utils / tools
+dive = "latest"
+cosign = "latest"
+fx = "latest"
+"github:pamburus/hl" = "latest"
+grpcurl = "latest"
+usage = "latest"
+step = "latest"
+"pipx:dotfiles" = "latest"
+fnox = "latest"
+slsa-verifier = "latest"
+"github:sethvargo/ratchet" = "latest"
+watchexec = "latest"
+rclone = "latest"
+"github:topgrade-rs/topgrade" = "latest"
+"pipx:oci-cli" = "latest"
+azure-cli = "latest"
+"pipx:checkoutmanager" = "latest"
+"pipx:pgcli" = "latest"
+"pipx:litecli" = "latest"
+"pipx:mycli" = "latest"
+"pipx:esphome" = "latest"
+"pipx:platformio" = "latest"
+
+# Languages/runtimes/adjacent
+python = ["3.15.0", "3.13", "3.12", "3.11", "3.10"]
+go = "latest"
+node = "latest"
+rust = "latest"
+uv = "latest"
+"pipx:pyright" = "latest"
+rust-analyzer = "latest"
+"npm:skills" = "latest"
+"github:rtk-ai/rtk" = "latest"
+yq = "latest"
+zizmor = "latest"
+gh = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+cargo-binstall = "latest"
+delta = "latest"
+krew = "latest"
+
+
+[tools."github:mortenlj/bootdns"]
+version = "latest"
+minimum_release_age = "1s"
+os = ["linux"]
+
+[tools."github:navikt/cplt"]
+version = "latest"
+minimum_release_age = "1s"
+
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = []
+minimum_release_age = "7d"
+jobs = 2
+
+[settings.pipx]
+uvx = true
+
+[settings.python]
+compile = false
+
+[settings.github]
+credential_command = "gh auth token"
+use_git_credentials = true
+
+[tasks.bootstrap]
+description = "Bootstrap a machine. Called at the end of mise bootstrap."
+hide = true
+depends = [
+    "bootstrap:*"
+]
+
+[dotfiles]
+"~/.config/mise/config.toml" = { mode = "track" }
