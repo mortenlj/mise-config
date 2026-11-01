@@ -46,6 +46,9 @@ depends = [
 description = "Extract ansible vault-password from Bitwarden to disk"
 hide = true
 tools = { jq = "latest" }
+outputs = [
+    "~/.ansible/vault-pass"
+]
 run = """#!/usr/bin/env bash
 bw login
 bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-pass
