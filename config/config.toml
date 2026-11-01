@@ -27,6 +27,10 @@ user = "root"
 group = "root"
 
 [bootstrap.files."/usr/local/bin/bw"]
+os = "linux"
+user = "root"
+group = "root"
+mode = "0755"
 content = """#!/usr/bin/bash
 flatpak run --command=bw com.bitwarden.desktop "$@"
 """
