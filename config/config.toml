@@ -23,12 +23,12 @@ login_shell = "bash"
 
 [bootstrap.directories."/usr/local/bin"]
 os = "linux"
-user = "root"
+owner = "root"
 group = "root"
 
 [bootstrap.files."/usr/local/bin/bw"]
 os = "linux"
-user = "root"
+owner = "root"
 group = "root"
 mode = "0755"
 content = """#!/usr/bin/bash
