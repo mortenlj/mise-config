@@ -21,7 +21,8 @@ login_shell = "bash"
 "~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
 "~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
 
-[bootstrap.directories]
+[bootstrap.directories."/usr/local/bin"]
+
 
 
 [bootstrap.files."/usr/local/bin/bw"]
