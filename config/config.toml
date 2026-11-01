@@ -27,8 +27,12 @@ depends = [
     "bootstrap:*"
 ]
 
-[tasks."bootstrap:ansible-playbook"]
 
+[tasks."bootstrap:ansible-playbook"]
+description = "Execute ansible workstations playbook"
+hide = true
+dir = "~/code/personal/ansible"
+run = "mise run workstations"
 
 [tools]
 # Kubernetes
