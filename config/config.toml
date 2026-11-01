@@ -8,6 +8,7 @@ login_shell = "bash"
 # MacOS
 "brew:bash" = { version = "latest", os = "macos" }
 "brew:git" = { version = "latest", os = "macos" }
+"brew:bitwarden-cli" =  { version = "latest", os = "macos" }
 "brew-cask:bitwarden" =  { version = "latest", os = "macos" }
 
 # Linux
