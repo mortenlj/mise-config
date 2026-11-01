@@ -57,7 +57,8 @@ bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-p
 [tasks."bootstrap:ansible-playbook"]
 description = "Execute ansible workstations playbook"
 depends = [
-    "bootstrap:ansible-vault-password"
+    "bootstrap:ansible-vault-password",
+    { task = "bootstrap:install-brew", optional = true }
 ]
 hide = true
 dir = "~/code/personal/ansible"
