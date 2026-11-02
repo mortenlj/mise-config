@@ -37,6 +37,26 @@ flatpak run --command=bw com.bitwarden.desktop "$@"
 
 [bootstrap.directories."~/.ssh/config.d"]
 
+[bootstrap.files."~/.ssh/config"]
+content = """
+Include config.d/*
+"""
+
+[bootstrap.files."~/.ssh/config.d/linux-bw-identity-agent"]
+os = "linux"
+content = """
+Host *
+    IdentityAgent ~/.bitwarden-ssh-agent.sock
+"""
+
+[bootstrap.files."~/.ssh/config.d/macos-bw-identity-agent"]
+os = "macos"
+content = """
+Host *
+    IdentityAgent ~/.bitwarden-ssh-agent.sock
+"""
+
+
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
 hide = true
