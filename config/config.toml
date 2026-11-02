@@ -153,4 +153,4 @@ use_git_credentials = true
 "~/.config/mise/" = { mode = "track" }
 
 [history]
-exclude = [".idea"]
+exclude = [".idea", "__pycache__"]

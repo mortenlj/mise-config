@@ -9,7 +9,8 @@
     }
   ],
   "exclude": [
-    ".idea"
+    ".idea",
+    "__pycache__"
   ],
   "recipients": [],
   "permissions": {}
