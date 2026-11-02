@@ -107,7 +107,7 @@ azure-cli = { version = "latest", python = "3.14" }
 "pipx:platformio" = "latest"
 
 # Languages/runtimes/adjacent
-python = ["3.15.0", "3.13", "3.12", "3.11", "3.10"]
+python = "latest"
 go = "latest"
 node = "latest"
 rust = "latest"
