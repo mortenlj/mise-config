@@ -46,7 +46,7 @@ Include config.d/*
 os = "linux"
 content = """
 Host *
-    IdentityAgent ~/.bitwarden-ssh-agent.sock
+    IdentityAgent ~/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 """
 
 [bootstrap.files."~/.ssh/config.d/macos-bw-identity-agent"]
