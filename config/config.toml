@@ -98,7 +98,7 @@ watchexec = "latest"
 rclone = "latest"
 "github:topgrade-rs/topgrade" = "latest"
 "pipx:oci-cli" = "latest"
-azure-cli = { version = "latest",  }
+azure-cli = { version = "latest", python = "3.14n" }
 "pipx:checkoutmanager" = "latest"
 "pipx:pgcli" = "latest"
 "pipx:litecli" = "latest"
