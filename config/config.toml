@@ -151,3 +151,6 @@ use_git_credentials = true
 
 [dotfiles]
 "~/.config/mise/" = { mode = "track" }
+
+[history]
+exclude = [".idea"]

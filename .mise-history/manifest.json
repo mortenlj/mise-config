@@ -8,7 +8,9 @@
       "variants": []
     }
   ],
-  "exclude": [],
+  "exclude": [
+    ".idea"
+  ],
   "recipients": [],
   "permissions": {}
 }
