@@ -35,6 +35,11 @@ content = """#!/usr/bin/bash
 flatpak run --command=bw com.bitwarden.desktop "$@"
 """
 
+[bootstrap.directories."~/.ssh/config.d"]
+os = "linux"
+owner = "root"
+group = "root"
+
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
 hide = true
