@@ -1,7 +1,8 @@
 [settings]
 experimental = true
 idiomatic_version_file_enable_tools = [
-    "go"
+    "go",
+    "goreleaser"
 ]
 minimum_release_age = "7d"
 
