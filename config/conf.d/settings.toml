@@ -1,0 +1,14 @@
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = []
+minimum_release_age = "7d"
+
+[settings.pipx]
+uvx = true
+
+[settings.python]
+compile = false
+
+[settings.github]
+credential_command = "gh auth token"
+use_git_credentials = true

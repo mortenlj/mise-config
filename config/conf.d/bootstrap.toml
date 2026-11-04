@@ -1,0 +1,86 @@
+[bootstrap.services.mise-history]
+builtin = "history-watch"
+
+[bootstrap.user]
+login_shell = "bash"
+
+[bootstrap.packages]
+# MacOS
+"brew:bash" = { version = "latest", os = "macos" }
+"brew:git" = { version = "latest", os = "macos" }
+"brew:bitwarden-cli" =  { version = "latest", os = "macos" }
+"brew-cask:bitwarden" =  { version = "latest", os = "macos" }
+
+# Linux
+"apt:flatpak" = { version = "latest", os = "linux" }
+"apt:git" = { version = "latest", os = "linux" }
+"flatpak:bitwarden" =  { version = "latest", os = "linux" }
+
+[bootstrap.repos]
+"~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
+"~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
+"~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
+
+[bootstrap.directories."/usr/local/bin"]
+os = "linux"
+owner = "root"
+group = "root"
+
+[bootstrap.files."/usr/local/bin/bw"]
+os = "linux"
+owner = "root"
+group = "root"
+mode = "0755"
+content = """#!/usr/bin/bash
+flatpak run --command=bw com.bitwarden.desktop "$@"
+"""
+
+[bootstrap.directories."~/.ssh/config.d"]
+
+[bootstrap.files."~/.ssh/config"]
+content = """
+Include config.d/*
+"""
+
+[bootstrap.files."~/.ssh/config.d/linux-bw-identity-agent"]
+os = "linux"
+content = """
+Host *
+    IdentityAgent ~/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+"""
+
+[bootstrap.files."~/.ssh/config.d/macos-bw-identity-agent"]
+os = "macos"
+content = """
+Host *
+    IdentityAgent ~/.bitwarden-ssh-agent.sock
+"""
+
+[tasks.bootstrap]
+description = "Bootstrap a machine. Called at the end of mise bootstrap."
+hide = true
+depends = [
+    "bootstrap:*"
+]
+
+[tasks."bootstrap:ansible-vault-password"]
+description = "Extract ansible vault-password from Bitwarden to disk"
+hide = true
+tools = { jq = "latest" }
+outputs = [
+    "~/.ansible/vault-pass"
+]
+run = """#!/usr/bin/env bash
+bw login
+bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-pass
+"""
+
+[tasks."bootstrap:ansible-playbook"]
+description = "Execute ansible workstations playbook"
+depends = [
+    "bootstrap:ansible-vault-password",
+    { task = "bootstrap:install-brew", optional = true }
+]
+hide = true
+dir = "~/code/personal/ansible"
+run = "mise run workstations"
