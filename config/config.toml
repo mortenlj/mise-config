@@ -66,7 +66,6 @@ os = ["linux"]
 
 [tools."github:navikt/cplt"]
 version = "latest"
-minimum_release_age = "1s"
 
 [dotfiles]
 "~/.config/mise/" = { mode = "track" }
