@@ -70,16 +70,17 @@ depends = [
 description = "Enable dotfiles"
 hide = true
 tools = { "pipx:dotfiles" = "latest" }
-
+skip_if = "ls ~/.ansible/ansible.cfg"
+run = """#!/usr/bin/env bash
+dotfiles -s 
+"""
 
 [tasks."bootstrap:ansible-vault-password"]
 description = "Extract ansible vault-password from Bitwarden to disk"
 hide = true
 interactive = true
 tools = { jq = "latest" }
-outputs = [
-    "~/.ansible/vault-pass"
-]
+skip_if = "ls ~/.ansible/vault-pass"
 run = """#!/usr/bin/env bash
 bw login
 bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-pass
