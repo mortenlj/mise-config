@@ -72,6 +72,7 @@ hide = true
 tools = { "pipx:dotfiles" = "latest" }
 skip_if = "ls ~/.ansible/ansible.cfg"
 run = """#!/usr/bin/env bash
+ln -s ~/dotfiles/dotfilesrc ~/.dotfilesrc
 dotfiles -s
 """
 
@@ -88,6 +89,7 @@ bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-p
 
 [tasks."bootstrap:ansible-playbook"]
 description = "Execute ansible workstations playbook"
+interactive = true
 depends = [
     "bootstrap:ansible-vault-password",
     "bootstrap:dotfiles",
