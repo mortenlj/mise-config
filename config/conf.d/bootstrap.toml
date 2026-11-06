@@ -20,6 +20,7 @@ login_shell = "bash"
 "~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
 "~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
 "~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
+"~/dotfiles" = { url = "git@github.com:mortenlj/dotfiles.git" }
 
 [bootstrap.directories."/usr/local/bin"]
 os = "linux"
@@ -64,6 +65,12 @@ hide = true
 depends = [
     "bootstrap:*"
 ]
+
+[tasks."bootstrap:dotfiles"]
+description = "Enable dotfiles"
+hide = true
+tools = { "pipx:dotfiles" = "latest" }
+
 
 [tasks."bootstrap:ansible-vault-password"]
 description = "Extract ansible vault-password from Bitwarden to disk"
