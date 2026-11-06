@@ -1,7 +1,7 @@
-[tools]
-"github:gjensidige/gjcli" = "latest"
-"github:gjensidige/gap-api" = "latest"
-[tools."github:mortenlj/bootdns"]
+[tools."github:gjensidige/gjcli"]
 version = "latest"
 minimum_release_age = "1s"
-os = ["linux"]
+
+[tools."github:gjensidige/gap-api"]
+version = "latest"
+minimum_release_age = "1s"
