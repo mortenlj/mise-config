@@ -14,7 +14,7 @@ login_shell = "bash"
 # Linux
 "apt:flatpak" = { version = "latest", os = "linux" }
 "apt:git" = { version = "latest", os = "linux" }
-"flatpak:bitwarden" =  { version = "latest", os = "linux" }
+"flatpak:com.bitwarden.desktop" =  { version = "latest", os = "linux" }
 
 [bootstrap.repos]
 "~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
