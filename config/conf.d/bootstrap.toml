@@ -20,6 +20,7 @@ login_shell = "bash"
 "~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
 "~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
 "~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
+"~/dotfiles" = { url = "git@github.com:mortenlj/dotfiles.git" }
 
 [bootstrap.directories."/usr/local/bin"]
 os = "linux"
@@ -34,6 +35,8 @@ mode = "0755"
 content = """#!/usr/bin/bash
 flatpak run --command=bw com.bitwarden.desktop "$@"
 """
+
+[bootstrap.directories."~/.ansible"]
 
 [bootstrap.directories."~/.ssh/config.d"]
 
@@ -63,13 +66,21 @@ depends = [
     "bootstrap:*"
 ]
 
+[tasks."bootstrap:dotfiles"]
+description = "Enable dotfiles"
+hide = true
+tools = { "pipx:dotfiles" = "latest" }
+skip_if = "ls ~/.ansible/ansible.cfg"
+run = """#!/usr/bin/env bash
+dotfiles -s
+"""
+
 [tasks."bootstrap:ansible-vault-password"]
 description = "Extract ansible vault-password from Bitwarden to disk"
 hide = true
+interactive = true
 tools = { jq = "latest" }
-outputs = [
-    "~/.ansible/vault-pass"
-]
+skip_if = "ls ~/.ansible/vault-pass"
 run = """#!/usr/bin/env bash
 bw login
 bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-pass
@@ -79,6 +90,7 @@ bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-p
 description = "Execute ansible workstations playbook"
 depends = [
     "bootstrap:ansible-vault-password",
+    "bootstrap:dotfiles",
     { task = "bootstrap:install-brew", optional = true }
 ]
 hide = true
