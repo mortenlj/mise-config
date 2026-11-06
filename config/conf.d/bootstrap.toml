@@ -35,6 +35,8 @@ content = """#!/usr/bin/bash
 flatpak run --command=bw com.bitwarden.desktop "$@"
 """
 
+[bootstrap.directories."~/.ansible"]
+
 [bootstrap.directories."~/.ssh/config.d"]
 
 [bootstrap.files."~/.ssh/config"]
