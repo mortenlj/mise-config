@@ -72,7 +72,7 @@ hide = true
 tools = { "pipx:dotfiles" = "latest" }
 skip_if = "ls ~/.ansible/ansible.cfg"
 run = """#!/usr/bin/env bash
-dotfiles -s 
+dotfiles -s
 """
 
 [tasks."bootstrap:ansible-vault-password"]
@@ -90,6 +90,7 @@ bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-p
 description = "Execute ansible workstations playbook"
 depends = [
     "bootstrap:ansible-vault-password",
+    "bootstrap:dotfiles",
     { task = "bootstrap:install-brew", optional = true }
 ]
 hide = true
