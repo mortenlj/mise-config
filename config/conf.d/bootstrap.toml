@@ -70,7 +70,7 @@ depends = [
 description = "Enable dotfiles"
 hide = true
 tools = { "pipx:dotfiles" = "latest" }
-skip_if = "ls ~/.ansible/ansible.cfg"
+skip_if = "ls ~/.ansible/hosts"
 run = """#!/usr/bin/env bash
 ln -s ~/dotfiles/dotfilesrc ~/.dotfilesrc
 dotfiles -s
