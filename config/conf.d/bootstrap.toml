@@ -72,8 +72,7 @@ hide = true
 tools = { "pipx:dotfiles" = "latest" }
 skip_if = "ls ~/.ansible/hosts"
 run = """#!/usr/bin/env bash
-ln -s ~/dotfiles/dotfilesrc ~/.dotfilesrc
-dotfiles -s
+dotfiles --repo=~/dotfiles --config=~/dotfiles/dotfilesrc --force --sync
 """
 
 [tasks."bootstrap:ansible-vault-password"]
