@@ -1,3 +1,7 @@
-[tools]
-"github:gjensidige/gjcli" = "latest"
-"github:gjensidige/gap-api" = "latest"
+[tools."github:gjensidige/gjcli"]
+version = "latest"
+minimum_release_age = "1s"
+
+[tools."github:gjensidige/gap-api"]
+version = "latest"
+minimum_release_age = "1s"
