@@ -14,5 +14,10 @@
     ".DS_Store"
   ],
   "recipients": [],
-  "permissions": {}
+  "permissions": {
+    "config/conf.d": 509,
+    "config/tasks": 509,
+    "config/tasks/maintenance": 509,
+    "config/tasks/presets": 509
+  }
 }
