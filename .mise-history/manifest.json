@@ -12,6 +12,20 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/.ssh/config.d/linux-bw-identity-agent",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "linux"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     }
   ],
   "exclude": [
