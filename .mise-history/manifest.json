@@ -6,6 +6,12 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/.ssh/config.d",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
     }
   ],
   "exclude": [
@@ -18,6 +24,7 @@
     "config/conf.d": 509,
     "config/tasks": 509,
     "config/tasks/maintenance": 509,
-    "config/tasks/presets": 509
+    "config/tasks/presets": 509,
+    "home/.ssh": 448
   }
 }

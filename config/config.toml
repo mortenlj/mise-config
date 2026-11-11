@@ -69,6 +69,7 @@ version = "latest"
 
 [dotfiles]
 "~/.config/mise/" = { mode = "track" }
+"~/.ssh/config.d" = { mode = "track" }
 
 [history]
 exclude = [".idea", "__pycache__", ".DS_Store"]
