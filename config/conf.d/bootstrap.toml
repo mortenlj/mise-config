@@ -40,6 +40,8 @@ flatpak run --command=bw com.bitwarden.desktop "$@"
 content = """
 Include config.d/*
 """
+mode = "0644"
+
 
 [tasks.bootstrap]
 description = "Bootstrap a machine. Called at the end of mise bootstrap."
