@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFD7C4;}
+	.st1{fill:#090C33;stroke:#0A0C33;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#008256;stroke:#090C33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#00DCA1;stroke:#090C33;stroke-miterlimit:10;}
+	.st4{fill:#F4FFAF;stroke:#090C33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:#7C55FF;stroke:#090C33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:#B598FF;stroke:#090C33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{fill:#F2F3FD;stroke:#0A0C33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Bakgrunn">
+	<rect class="st0" width="1920" height="1080"/>
+</g>
+<g id="Skygge">
+	<path class="st1" d="M1429.6,927.5c0,9.8-184.7,17.7-412.6,17.7c-399.7,0-442.1-12.9-412.6-17.7c49.6-7.9,184.7-17.7,412.6-17.7
+		S1429.6,917.8,1429.6,927.5z"/>
+</g>
+<g id="Stolper">
+	<g>
+		<g>
+			<polygon class="st2" points="719.7,912.7 680.8,932.6 680.8,826.9 719.7,807 			"/>
+			<rect x="618.2" y="826.9" class="st3" width="62.6" height="105.7"/>
+			<polygon class="st4" points="680.8,826.9 618.2,826.9 657.1,807 719.7,807 			"/>
+		</g>
+		<g>
+			<polygon class="st5" points="810,912.7 771,932.6 771,777.5 810,757.6 			"/>
+			<rect x="708.4" y="777.5" class="st6" width="62.6" height="155.1"/>
+			<polygon class="st4" points="771,777.5 708.4,777.5 747.3,757.6 810,757.6 			"/>
+		</g>
+		<g>
+			<polygon class="st2" points="900.2,912.7 861.2,932.6 861.2,732.6 900.2,712.7 			"/>
+			<rect x="798.6" y="732.6" class="st3" width="62.6" height="200"/>
+			<polygon class="st4" points="861.2,732.6 798.6,732.6 837.5,712.7 900.2,712.7 			"/>
+		</g>
+		<g>
+			<polygon class="st5" points="990.4,912.7 951.4,932.6 951.4,687.9 990.4,668 			"/>
+			<rect x="888.8" y="687.9" class="st6" width="62.6" height="244.7"/>
+			<polygon class="st4" points="951.4,687.9 888.8,687.9 927.8,668 990.4,668 			"/>
+		</g>
+		<g>
+			<polygon class="st2" points="1080.6,912.7 1041.6,932.6 1041.6,638.4 1080.6,618.5 			"/>
+			<rect x="979" y="638.4" class="st3" width="62.6" height="294.3"/>
+			<polygon class="st4" points="1041.6,638.4 979,638.4 1018,618.5 1080.6,618.5 			"/>
+		</g>
+		<g>
+			<polygon class="st5" points="1170.8,912.7 1131.8,932.6 1131.8,148.8 1170.8,128.9 			"/>
+			<rect x="1069.2" y="148.8" class="st6" width="62.6" height="783.8"/>
+			<polygon class="st4" points="1131.8,148.8 1069.2,148.8 1108.2,128.9 1170.8,128.9 			"/>
+		</g>
+	</g>
+</g>
+<g id="Skyer">
+	<path class="st7" d="M1154.5,165.1h136c0,0,10.8-64.1-69.5-12.5C1221,152.6,1206.5,126,1154.5,165.1z"/>
+	<path class="st7" d="M896,214.4h188.3c0,0,5.8-21-30.4-5.8c0,0,18-27.5,1.4-35.7c-16.6-8.2-65,34.1-65,34.1s5-34.8-38.5-18.7
+		c-16,5.9-32.5,19.6-32.5,19.6S917.5,189.7,896,214.4z"/>
+	<path class="st7" d="M1078.1,265.7h304.2c0,0,13.8-50-47.8-11.1c0,0,3.1-19.7-34-1.9c0,0,30.2-55.3-26.9-39.7s-94.7,40.9-94.7,40.9
+		s23.1-32.5-9.1-25.4c-32.2,7.1-60.9,28.2-60.9,28.2S1130.5,216.5,1078.1,265.7z"/>
+</g>
+</svg>

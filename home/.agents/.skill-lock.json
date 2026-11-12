@@ -1,0 +1,169 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-11-12T11:53:22.733Z",
+      "updatedAt": "2026-11-12T11:53:22.733Z"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "skillFolderHash": "3df14e2d3a89459bf300614be9247e3ce74798f8",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.329Z",
+      "updatedAt": "2026-11-12T12:11:07.329Z"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "skillFolderHash": "eedaf2562c83155115e9c649fa3ecaac2e10e81d",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.334Z",
+      "updatedAt": "2026-11-12T12:11:07.334Z"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "skillFolderHash": "f551b6e0d219fdda0b6abf277f8f915b3127d1e9",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.335Z",
+      "updatedAt": "2026-11-12T12:11:07.335Z"
+    },
+    "research": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/research/SKILL.md",
+      "skillFolderHash": "2f8f36af48796faed5c687c75bb650071631a984",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.335Z",
+      "updatedAt": "2026-11-12T12:11:07.335Z"
+    },
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "skillFolderHash": "b644b684781fd5baae57f6be000a180a4d4448d7",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.336Z",
+      "updatedAt": "2026-11-12T12:11:07.336Z"
+    },
+    "handoff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/handoff/SKILL.md",
+      "skillFolderHash": "ce24892bd2d4b9e7fd5ac9b95c03175e18bef388",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.336Z",
+      "updatedAt": "2026-11-12T12:11:07.336Z"
+    },
+    "to-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/to-spec/SKILL.md",
+      "skillFolderHash": "136b9651747cfccbfbb7c50a6b0dfb757e7547d2",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.337Z",
+      "updatedAt": "2026-11-12T12:11:07.337Z"
+    },
+    "wizard": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/wizard/SKILL.md",
+      "skillFolderHash": "e396d3ba97c723a78ffd350fb14a3c409137b306",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-11-12T12:11:07.337Z",
+      "updatedAt": "2026-11-12T12:11:07.337Z"
+    },
+    "aks-debug-tooling": {
+      "source": "gjensidige/platform-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/platform-skills.git",
+      "skillPath": "skills/aks-debug-tooling/SKILL.md",
+      "skillFolderHash": "fb2d489596157885edc1bba364c9c68675fa4266",
+      "installedAt": "2026-11-12T12:12:36.939Z",
+      "updatedAt": "2026-11-12T12:12:36.939Z"
+    },
+    "azure-subscription-routing": {
+      "source": "gjensidige/platform-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/platform-skills.git",
+      "skillPath": "skills/azure-subscription-routing/SKILL.md",
+      "skillFolderHash": "123e59d95f12ef39d1336a899b013c09899259da",
+      "installedAt": "2026-11-12T12:12:36.945Z",
+      "updatedAt": "2026-11-12T12:12:36.945Z"
+    },
+    "git": {
+      "source": "gjensidige/platform-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/platform-skills.git",
+      "skillPath": "skills/git/SKILL.md",
+      "skillFolderHash": "efc124a17ea924bfefaf5da284b3a983b62de6dc",
+      "installedAt": "2026-11-12T12:12:36.946Z",
+      "updatedAt": "2026-11-12T12:12:36.946Z"
+    },
+    "hubble-relay-local": {
+      "source": "gjensidige/platform-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/platform-skills.git",
+      "skillPath": "skills/hubble-relay-local/SKILL.md",
+      "skillFolderHash": "1aff5d8ccbbd4d7b1c96a6d2eccaee89e027fdc4",
+      "installedAt": "2026-11-12T12:12:36.946Z",
+      "updatedAt": "2026-11-12T12:12:36.946Z"
+    },
+    "gap-app-grafana-debugging": {
+      "source": "gjensidige/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/skills.git",
+      "skillPath": "skills/gap-app-grafana-debugging/SKILL.md",
+      "skillFolderHash": "4cc7f69336e1adc95304b681a14e0be1cee8939b",
+      "installedAt": "2026-11-12T12:15:27.351Z",
+      "updatedAt": "2026-11-12T12:15:27.351Z"
+    },
+    "gjensidige-repo-guide": {
+      "source": "gjensidige/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/skills.git",
+      "skillPath": "skills/gjensidige-repo-guide/SKILL.md",
+      "skillFolderHash": "af52d17f568f477b327dbb1e5bbdc8365256f2e1",
+      "installedAt": "2026-11-12T12:15:27.357Z",
+      "updatedAt": "2026-11-12T12:15:27.357Z"
+    },
+    "html-slides": {
+      "source": "gjensidige/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/skills.git",
+      "skillPath": "skills/html-slides/SKILL.md",
+      "skillFolderHash": "27dc9ed255b04fa448054b624db48dbf0155a315",
+      "installedAt": "2026-11-12T12:15:27.357Z",
+      "updatedAt": "2026-11-12T12:15:27.357Z"
+    },
+    "powerpoint-gjensidige": {
+      "source": "gjensidige/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/gjensidige/skills.git",
+      "skillPath": "skills/powerpoint-gjensidige/SKILL.md",
+      "skillFolderHash": "eeacbd983b3df8b482f5731a7e381dce3ba675ab",
+      "installedAt": "2026-11-12T12:15:27.358Z",
+      "updatedAt": "2026-11-12T12:15:27.358Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  }
+}
