@@ -4,6 +4,7 @@ idiomatic_version_file_enable_tools = [
     "go"
 ]
 minimum_release_age = "7d"
+install_layout = "identity"
 
 [settings.pipx]
 uvx = true

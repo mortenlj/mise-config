@@ -1,0 +1,122 @@
+{
+  "$comment": "Machine-readable asset manifest for the Gjensidige slide tool. Human documentation lives in ASSETS.md (same directory). When you add an asset: add the file under the right subfolder, add an entry here, and describe it in ASSETS.md. Paths are relative to the assets/ directory.",
+  "colors": {
+    "rules": {
+      "slideBackground": ["darkBlue", "logoBlue", "yellow", "white", "purple"],
+      "textOnDark": { "body": "#FFFFFF", "accentDefault": "#F4FFAF" },
+      "textOnLight": { "body": "#090C33", "accentDefault": "#6545BF" },
+      "darkBackgrounds": ["darkBlue", "logoBlue", "purple"],
+      "lightBackgrounds": ["yellow", "white"]
+    },
+    "primary": {
+      "darkBlue": { "name": "Gjensidige Dark Blue", "hex": "#090C33", "cmyk": "100/86/0/67", "pantone": "2768 C", "source": "asset-exact (used as canvas colour throughout official digital illustrations)" },
+      "logoBlue": { "name": "Gjensidige Logo Blue", "hex": "#060948", "cmyk": "100/86/0/48", "pantone": "2758 C", "source": "asset-exact (fill of the official blue logo SVG)" },
+      "yellow":   { "name": "Gjensidige Yellow", "hex": "#F4FFAF", "cmyk": "2/0/35/0", "pantone": "937 C", "source": "asset-exact (fill of the official yellow logo SVG)" },
+      "white":    { "name": "Gjensidige White", "hex": "#FFFFFF", "cmyk": "0/0/0/0", "pantone": null, "source": "definition" },
+      "purple":   { "name": "Gjensidige Purple", "hex": "#6545BF", "cmyk": "72/67/0/0", "pantone": "2725 C", "source": "asset-exact (purple used in official Nordic map illustration)" }
+    },
+    "secondaryRamps": {
+      "$comment": "Hex values pixel-sampled from the official secondary-colours print swatch sheet (CMYK/Pantone originals held by brand/comms, not stored in this repo). 700 = darkest, 100 = lightest.",
+      "darkBlue":  { "700": "#111543", "600": "#282C5B", "500": "#444875", "400": "#686A93", "300": "#8F91B4", "200": "#BEC0D7", "100": "#F2F4FA" },
+      "purple":    { "700": "#464395", "600": "#615DA6", "500": "#7F78B7", "400": "#9B94C8", "300": "#B8B2D9", "200": "#D5D0E9", "100": "#F2EEF7" },
+      "yellow":    { "300": "#FAF3A0", "200": "#FCF7BD", "100": "#FDFCE6" },
+      "green":     { "700": "#098059", "600": "#2F9A6F", "500": "#4AB587", "400": "#7FC5A0", "300": "#A7D4BA", "200": "#CAE5D3", "100": "#E7F3EB" },
+      "turquoise": { "700": "#3D9DA6", "600": "#6FB8C3", "500": "#97D4E4", "400": "#ADDCE9", "300": "#C3E4EE", "200": "#D8EEF4", "100": "#E8F5FB" },
+      "blue":      { "700": "#4164A7", "600": "#6787C0", "500": "#91AFDC", "400": "#A9BEE4", "300": "#C1D0ED", "200": "#D8E1F4", "100": "#EEF3FB" },
+      "pink":      { "700": "#CD5D79", "600": "#E07F93", "500": "#F3A1B2", "400": "#F5B3C0", "300": "#F8C7D2", "200": "#FAD9E1", "100": "#FCEAEE" },
+      "red":       { "700": "#993D44", "600": "#C04952", "500": "#EA515E", "400": "#EF8080", "300": "#F4A4A0", "200": "#F9C8C6", "100": "#FCE8EA" },
+      "orange":    { "700": "#B37251", "600": "#D38761", "500": "#F49E74", "400": "#F7B590", "300": "#FAC8AC", "200": "#FCDBC9", "100": "#FEEEE5" },
+      "brown":     { "700": "#59534F", "600": "#7E7571", "500": "#A69D99", "400": "#BAB2AE", "300": "#D0C8C6", "200": "#E4DEDC", "100": "#FBF8F5" }
+    },
+    "digitalAccents": {
+      "$comment": "Exact hex values harvested from the official digital illustrations/logos. Prefer these for text highlights, charts and decorative elements ON DARK backgrounds - they are guaranteed to match the illustrations placed next to them.",
+      "yellow":    ["#EEFF76", "#F4FFAF", "#F9FFD7"],
+      "green":     ["#008059", "#0FA673", "#1FCC8C", "#50D7A5", "#82E3BE", "#B4EED7"],
+      "turquoise": ["#429DA6", "#64C5CD", "#87ECF5", "#9EF0F7", "#B6F4FA"],
+      "blue":      ["#4263A6", "#678BD2", "#8CB2FF", "#9CC3FF", "#BDD3FF", "#D2E4FF"],
+      "purple":    ["#6545BF", "#7C55FF", "#B099FF", "#CBBBFF"],
+      "pink":      ["#CC5C78", "#E48095", "#FCA4B3", "#FDB6C2", "#FED9E0"],
+      "red":       ["#FF525B", "#FF787F", "#FF999C", "#FFC5C8"],
+      "orange":    ["#B27150", "#D98962", "#FFA273", "#FFB58F", "#FFDBC9"],
+      "navy":      ["#090C33", "#393C66", "#6A6B8F", "#9FA0BD", "#CECFE0", "#F2F3FC"]
+    }
+  },
+  "logos": {
+    "blue": {
+      "svg": "logos/Gjensidige_Main Logo Alternative_Digital_Blue.svg",
+      "png": "logos/Gjensidige_Main-Logo-Alternative_Digital_Blue.png",
+      "hex": "#060948",
+      "use": "Light backgrounds only (white, yellow). Prefer SVG."
+    },
+    "yellow": {
+      "svg": "logos/Gjensidige_Main Logo Alternative_Digital_Yellow.svg",
+      "png": "logos/Gjensidige_Main-Logo-Alternative_Digital_Yellow.png",
+      "hex": "#F4FFAF",
+      "use": "Dark backgrounds only (dark blue, logo blue, purple). Prefer SVG."
+    },
+    "animated": {
+      "file": "logos/Symbol_1080x1080_kundeutbytte.mp4",
+      "aspect": "1:1",
+      "use": "Animated logo symbol illustrating customer dividend / financial savings (kundeutbytte). Use sparingly (title, section break or closing slide) and only when the content relates to savings, dividend or financial results. Render as <video autoplay muted loop playsinline>."
+    },
+    "outro-short": {
+      "file": "logos/logo-animation-short.mp4",
+      "aspect": "16:9",
+      "duration": "4s",
+      "use": "Short brand outro animation (the Gjensidige watchman symbol). Optional — for the CLOSING slide of any deck, regardless of topic, as a nice sign-off. Not tied to any content theme, unlike the other animated assets. Composited onto darkBlue; use on a darkBlue closing slide for a seamless edge. Plays once and holds on the final frame (no loop). Render as <video autoplay muted playsinline> (no loop)."
+    },
+    "outro-long": {
+      "file": "logos/logo-animation-long.mp4",
+      "aspect": "16:9",
+      "duration": "6s",
+      "use": "Longer version of the brand outro animation, same use as outro-short — pick one or the other, never both in the same deck."
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Gjensidige Display",
+      "dir": "fonts/Gjensidige Display",
+      "web": { "regular": "fonts/Gjensidige Display/GjensidigeDisplay-Regular-22x293.woff2" },
+      "use": "Headlines and hero text only: slide titles, big numbers, quotes. One weight (Regular). Never for body text."
+    },
+    "type": {
+      "family": "Gjensidige Type",
+      "dir": "fonts/Gjensidige Type",
+      "web": {
+        "light": "fonts/Gjensidige Type/GjensidigeType-Light.woff2",
+        "regular": "fonts/Gjensidige Type/GjensidigeType-Regular.woff2",
+        "bold": "fonts/Gjensidige Type/GjensidigeType-Bold.woff2",
+        "italic": "fonts/Gjensidige Type/GjensidigeType-Italic.woff2",
+        "boldItalic": "fonts/Gjensidige Type/GjensidigeType-BoldItalic.woff2",
+        "lightItalic": "fonts/Gjensidige Type/GjensidigeType-LightItalic.woff2"
+      },
+      "use": "Body copy, bullets, subtitles, table text. Light/Regular/Bold plus italics."
+    },
+    "label": {
+      "family": "Gjensidige Label",
+      "dir": "fonts/Gjensidige Label",
+      "web": { "regular": "fonts/Gjensidige Label/GjensidigeLabel-Regular-22x255.woff2" },
+      "use": "Small functional text: eyebrows/kickers, footers, page numbers, chart labels, tags. Usually uppercase with letter-spacing."
+    }
+  },
+  "illustrations": {
+    "$comment": "All illustrations are 1920x1080 SVG scenes drawn in the official digital palette. Except 'ai' (transparent background), each is a full-bleed scene on a solid colour panel ('panel' = that colour). The slide tool renders them as rounded image cards, which works on any primary background.",
+    "ai":                  { "file": "illustrations/Ai.svg", "title": "AI", "transparent": true, "themes": ["ai", "technology", "data", "automation", "machine learning"] },
+    "bar-chart":           { "file": "illustrations/Bar chart RGB.svg", "title": "Bar chart", "panel": "#FFD7C4", "themes": ["results", "kpi", "finance", "reporting", "growth", "statistics"] },
+    "build-bigger":        { "file": "illustrations/Build bigger RGB.svg", "title": "Build bigger", "panel": "#FFD7C4", "themes": ["growth", "ambition", "construction", "scaling", "building"] },
+    "company-growth":      { "file": "illustrations/Company Growth RGB.svg", "title": "Company growth", "panel": "#FFD7C4", "themes": ["growth", "strategy", "company", "expansion"] },
+    "animal-insurance":    { "file": "illustrations/Gjensidige_Animal Insurance_Digital.svg", "title": "Animal insurance", "panel": "#B4EED7", "themes": ["pets", "animals", "insurance products"] },
+    "customer-dividend":   { "file": "illustrations/Gjensidige_Customer Yield_Digital.svg", "title": "Customer dividend", "panel": "#678BD2", "themes": ["kundeutbytte", "customer dividend", "savings", "payout", "mutual model"] },
+    "damage-insurance":    { "file": "illustrations/Gjensidige_Damage Insurance_Digital.svg", "title": "Damage insurance", "panel": "#D0CAC7", "themes": ["claims", "damage", "property", "insurance products"] },
+    "driving-lesson":      { "file": "illustrations/Gjensidige_Driving Lesson_Digital.svg", "title": "Driving lesson", "panel": "#B6F4FA", "themes": ["car", "motor", "mobility", "learning", "young drivers"] },
+    "innovation":          { "file": "illustrations/Gjensidige_Innovation_Digital.svg", "title": "Innovation", "panel": "#FFDBC9", "themes": ["innovation", "ideas", "product development", "creativity"] },
+    "mental-health":       { "file": "illustrations/Gjensidige_Mental Health_Digital.svg", "title": "Mental health", "panel": "#FED9E0", "themes": ["health", "wellbeing", "mental health", "people"] },
+    "the-day":             { "file": "illustrations/Gjensidige_No One Knows the Day Better_Digital.svg", "title": "No one knows the day better", "panel": "#1FCC8C", "themes": ["brand", "campaign", "everyday life", "customers"] },
+    "pension":             { "file": "illustrations/Gjensidige_Pension_Digital.svg", "title": "Pension", "panel": "#64C5CD", "themes": ["pension", "retirement", "savings", "future"] },
+    "sustainability":      { "file": "illustrations/Gjensidige_Sustainability_Digital.svg", "title": "Sustainability", "panel": "#F9FFD7", "themes": ["sustainability", "esg", "environment", "climate"] },
+    "nordic-map":          { "file": "illustrations/Map Nordic RGB.svg", "title": "Nordic map (with names)", "panel": "#FFD7C4", "themes": ["markets", "nordics", "geography", "countries", "footprint"] },
+    "nordic-map-plain":    { "file": "illustrations/Map_Nordic_RGB_without names.svg", "title": "Nordic map (no names)", "panel": "#FFD7C4", "themes": ["markets", "nordics", "geography", "background"] },
+    "secure-lives":        { "file": "illustrations/Secure lives wires RGB.svg", "title": "Secure lives", "panel": "#FFD7C4", "themes": ["security", "protection", "safety", "purpose"] },
+    "security-innovation": { "file": "illustrations/Security Innovation RGB.svg", "title": "Security innovation", "panel": "#FFD7C4", "themes": ["security", "innovation", "technology", "protection"] }
+  }
+}
