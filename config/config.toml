@@ -71,6 +71,7 @@ version = "latest"
 "~/.config/mise/" = { mode = "track" }
 "~/.ssh/config.d" = { mode = "track" }
 "~/.ssh/config.d/linux-bw-identity-agent" = { mode = "track", variants = [{ os = "linux" }] }
+"~/.ssh/config.d/macos-bw-identity-agent" = { mode = "track", variants = [{ os = "macos" }] }
 
 [history]
 exclude = [".idea", "__pycache__", ".DS_Store"]

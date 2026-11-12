@@ -36,8 +36,6 @@ content = """#!/usr/bin/bash
 flatpak run --command=bw com.bitwarden.desktop "$@"
 """
 
-[bootstrap.directories."~/.ansible"]
-
 [bootstrap.files."~/.ssh/config"]
 content = """
 Include config.d/*
@@ -66,8 +64,12 @@ hide = true
 interactive = true
 tools = { jq = "latest" }
 skip_if = "ls ~/.ansible/vault-pass"
+depends = [
+    "bootstrap:dotfiles"
+]
 run = """#!/usr/bin/env bash
 bw login
+mkdir -p ~/.ansible/
 bw list items --search "Ansible Vault" | jq -r ".[0].notes" > ~/.ansible/vault-pass
 """
 
