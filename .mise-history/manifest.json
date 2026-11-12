@@ -6,6 +6,26 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/.ssh/config.d",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.ssh/config.d/linux-bw-identity-agent",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "linux"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     }
   ],
   "exclude": [
@@ -14,5 +34,13 @@
     ".DS_Store"
   ],
   "recipients": [],
-  "permissions": {}
+  "permissions": {
+    "config/conf.d": 509,
+    "config/tasks": 509,
+    "config/tasks/maintenance": 509,
+    "config/tasks/presets": 509,
+    "home/.ssh": 448,
+    "home/.ssh/config.d/hosts": 436,
+    "home/.ssh/config.d/settings": 436
+  }
 }
