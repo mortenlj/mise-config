@@ -26,6 +26,20 @@
           "default": false
         }
       ]
+    },
+    {
+      "path": "home/.ssh/config.d/macos-bw-identity-agent",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "macos"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     }
   ],
   "exclude": [
