@@ -1,0 +1,6 @@
+# Everything here is generated locally by build_demo.py and render_qa.sh
+# against your own template source. Not checked in: the demo deck embeds the
+# whole Gjensidige template (~600 KB) and goes stale on the next revision,
+# and the screenshots go stale with it. Screenshots belong in a PR body.
+demo.pptx
+screenshots/

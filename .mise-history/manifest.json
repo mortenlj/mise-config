@@ -8,6 +8,18 @@
       "variants": []
     },
     {
+      "path": "home/.agents/.skill-lock.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.agents/skills",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.ssh/config.d",
       "autosave": true,
       "encrypt": false,

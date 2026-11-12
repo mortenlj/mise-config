@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gjensidige/skills/blob/main/skills/html-slides/references/deck.schema.json",
+  "title": "Gjensidige deck",
+  "description": "Format-independent content model for a Gjensidige presentation. Renderers: tools/slides.mjs (HTML), powerpoint-gjensidige skill (.pptx).",
+  "type": "object",
+  "required": ["name", "slides"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string" },
+    "footerText": { "type": "string" },
+    "lang": { "type": "string" },
+    "embed": { "type": "boolean" },
+    "theme": {
+      "type": "object",
+      "properties": {
+        "background": { "$ref": "#/$defs/background" },
+        "accent": { "$ref": "#/$defs/accent" },
+        "footer": { "type": "boolean" }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/slide" }
+    }
+  },
+  "$defs": {
+    "background": {
+      "description": "Only the five primary colours may be slide backgrounds.",
+      "enum": ["darkBlue", "logoBlue", "yellow", "white", "purple"]
+    },
+    "accent": {
+      "description": "Secondary colour family used for accents and highlights.",
+      "enum": ["yellow", "blue", "green", "red", "purple", "sand"]
+    },
+    "richText": {
+      "type": "string",
+      "description": "Plain text with **bold** and _italic_; ;; separates paragraphs."
+    },
+    "bulletList": {
+      "oneOf": [
+        { "type": "array", "items": { "$ref": "#/$defs/richText" } },
+        { "$ref": "#/$defs/richText" }
+      ]
+    },
+    "slide": {
+      "type": "object",
+      "required": ["layout"],
+      "properties": {
+        "layout": {
+          "enum": ["title", "section", "content", "two-column", "image", "quote", "stat", "closing"]
+        },
+        "title": { "$ref": "#/$defs/richText" },
+        "subtitle": { "$ref": "#/$defs/richText" },
+        "eyebrow": { "type": "string" },
+        "body": { "$ref": "#/$defs/richText" },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "bullets": { "$ref": "#/$defs/bulletList" },
+        "left-title": { "$ref": "#/$defs/richText" },
+        "left-body": { "$ref": "#/$defs/richText" },
+        "left-bullets": { "$ref": "#/$defs/bulletList" },
+        "right-title": { "$ref": "#/$defs/richText" },
+        "right-body": { "$ref": "#/$defs/richText" },
+        "right-bullets": { "$ref": "#/$defs/bulletList" },
+        "quote": { "$ref": "#/$defs/richText" },
+        "attribution": { "type": "string" },
+        "stat": { "type": "string" },
+        "stat-label": { "type": "string" },
+        "illustration": {
+          "type": "string",
+          "description": "Slug from assets/registry.json illustrations."
+        },
+        "image-side": { "enum": ["left", "right"] },
+        "background": { "$ref": "#/$defs/background" },
+        "accent": { "$ref": "#/$defs/accent" },
+        "logo": { "enum": ["auto", "blue", "yellow", "none"] },
+        "animatedLogo": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
