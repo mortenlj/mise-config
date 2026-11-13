@@ -5,3 +5,6 @@ minimum_release_age = "1s"
 [tools."github:gjensidige/gap-api"]
 version = "latest"
 minimum_release_age = "1s"
+
+[tools]
+azure-cli = { version = "latest", python = "3.14" }

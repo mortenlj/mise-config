@@ -1,0 +1,6 @@
+[bootstrap.repos]
+"~/code/gjensidige/gap-api" = {url = "https://github.com/gjensidige/gap-api.git", submodules = true}
+"~/code/gjensidige/gappynator" = {url = "git@github.com:gjensidige/gappynator.git", submodules = true}
+"~/code/gjensidige/terraform-aks" = {url = "https://github.com/gjensidige/terraform-aks.git", submodules = true}
+"~/code/gjensidige/terraform-aks-policies" = {url = "https://github.com/gjensidige/terraform-aks-policies.git", submodules = true}
+"~/code/gjensidige-platform-services/git-commit-signed-action" = {url = "https://github.com/gjensidige-platform-services/git-commit-signed-action.git", submodules = true}
