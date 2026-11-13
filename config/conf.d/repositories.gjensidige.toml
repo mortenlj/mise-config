@@ -1,2 +1,3 @@
 [bootstrap.repos]
 "~/code/gjensidige/gappynator" = {"url" = "git@github.com:gjensidige/gappynator.git", "submodules" = true}
+"~/code/gjensidige/gap-api" = {url = "https://github.com/gjensidige/gap-api.git", submodules = true}
