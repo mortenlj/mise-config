@@ -3,3 +3,4 @@
 "~/code/gjensidige/gappynator" = {url = "git@github.com:gjensidige/gappynator.git", submodules = true}
 "~/code/gjensidige/terraform-aks" = {url = "https://github.com/gjensidige/terraform-aks.git", submodules = true}
 "~/code/gjensidige/terraform-aks-policies" = {url = "https://github.com/gjensidige/terraform-aks-policies.git", submodules = true}
+"~/code/personal/ansible" = {url = "git@github.com:mortenlj/ansible.git", submodules = true}
