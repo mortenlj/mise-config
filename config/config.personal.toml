@@ -1,0 +1,79 @@
+
+[tools]
+# Kubernetes
+"aqua:kubectl" = "1.37.1"
+azure-kubelogin = "latest"
+kind = "latest"
+stern = "latest"
+kubectx = "latest"
+kubebuilder = "latest"
+kubeseal = "latest"
+helm = "latest"
+kubens = "latest"
+ctlptl = "latest"
+kubecolor = "latest"
+kubie = "latest"
+k9s = "latest"
+k3d = "latest"
+"github:purelb/purelb" = {version = "latest", matching = "kubectl-purelb", rename_exe = "kubectl-purelb"}
+
+# Utils / tools
+dive = "latest"
+cosign = "latest"
+fx = "latest"
+"github:pamburus/hl" = "latest"
+grpcurl = "latest"
+usage = "latest"
+step = "latest"
+"pipx:dotfiles" = "latest"
+fnox = "latest"
+slsa-verifier = "latest"
+"github:sethvargo/ratchet" = "latest"
+watchexec = "latest"
+rclone = "latest"
+"github:topgrade-rs/topgrade" = "latest"
+"pipx:oci-cli" = "latest"
+azure-cli = { version = "latest", python = "3.14" }
+"pipx:checkoutmanager" = "latest"
+"pipx:pgcli" = "latest"
+"pipx:litecli" = "latest"
+"pipx:mycli" = "latest"
+"pipx:esphome" = "latest"
+"pipx:platformio" = "latest"
+
+# Languages/runtimes/adjacent
+python = "latest"
+go = "latest"
+node = "latest"
+rust = "latest"
+uv = "latest"
+"pipx:pyright" = "latest"
+rust-analyzer = "latest"
+"npm:skills" = "latest"
+"github:rtk-ai/rtk" = "latest"
+yq = "latest"
+zizmor = "latest"
+gh = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+cargo-binstall = "latest"
+delta = "latest"
+krew = "latest"
+
+[tools."github:mortenlj/bootdns"]
+version = "latest"
+minimum_release_age = "1s"
+os = ["linux"]
+
+[tools."github:navikt/cplt"]
+version = "latest"
+
+[dotfiles]
+"~/.agents/.skill-lock.json" = { mode = "track" }
+"~/.agents/skills" = { mode = "track" }
+"~/.config/mise/" = { mode = "track" }
+"~/.ssh/config.d" = { mode = "track" }
+"~/.ssh/config.d/linux-bw-identity-agent" = { mode = "track", variants = [{ os = "linux" }] }
+"~/.ssh/config.d/macos-bw-identity-agent" = { mode = "track", variants = [{ os = "macos" }] }
+
+[history]
+exclude = [".idea", "__pycache__", ".DS_Store"]
