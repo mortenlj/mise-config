@@ -1,0 +1,11 @@
+
+[tools]
+kubeseal = "latest"
+"github:purelb/purelb" = {version = "latest", matching = "kubectl-purelb", rename_exe = "kubectl-purelb"}
+
+# Utils / tools
+fnox = "latest"
+"pipx:oci-cli" = "latest"
+"pipx:esphome" = "latest"
+"pipx:platformio" = "latest"
+gcloud = "latest"
