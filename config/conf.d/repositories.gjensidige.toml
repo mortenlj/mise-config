@@ -11,3 +11,4 @@
 "~/code/gjensidige/platform-kubernetes-manifests" = {url = "git@github.com:gjensidige/platform-kubernetes-manifests.git", submodules = true}
 "~/code/gjensidige-platform-services/terraform-azurerm-kubernetes-cluster" = {url = "https://github.com/gjensidige-platform-services/terraform-azurerm-kubernetes-cluster.git", submodules = true}
 "~/code/gjensidige-platform-services/terraform-modules-aks-policies" = {url = "https://github.com/gjensidige-platform-services/terraform-modules-aks-policies.git", submodules = true}
+"~/code/gjensidige-platform-services/terraform-modules-kubernetes-config-and-tools" = {url = "https://github.com/gjensidige-platform-services/terraform-modules-kubernetes-config-and-tools.git", submodules = true}
