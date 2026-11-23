@@ -17,3 +17,4 @@
 "~/code/gjensidige/terraform-common-aad" = {url = "https://github.com/gjensidige/terraform-common-aad.git", submodules = true}
 "~/code/gjensidige/terraform-azure-onboarding" = {url = "https://github.com/gjensidige/terraform-azure-onboarding.git", submodules = true}
 "~/code/gjensidige/terraform-github-config" = {url = "https://github.com/gjensidige/terraform-github-config.git", submodules = true}
+"~/code/gjensidige/github-actions-runners" = {url = "https://github.com/gjensidige/github-actions-runners.git", submodules = true}
