@@ -14,3 +14,8 @@
 "~/code/gjensidige-platform-services/terraform-modules-kubernetes-config-and-tools" = {url = "https://github.com/gjensidige-platform-services/terraform-modules-kubernetes-config-and-tools.git", submodules = true}
 "~/code/gjensidige/platform-skills" = {url = "https://github.com/gjensidige/platform-skills.git", submodules = true}
 "~/code/gjensidige/gjcli" = {url = "https://github.com/gjensidige/gjcli.git", submodules = true}
+"~/code/gjensidige/terraform-common-aad" = {url = "https://github.com/gjensidige/terraform-common-aad.git", submodules = true}
+"~/code/gjensidige/terraform-azure-onboarding" = {url = "https://github.com/gjensidige/terraform-azure-onboarding.git", submodules = true}
+"~/code/gjensidige/terraform-github-config" = {url = "https://github.com/gjensidige/terraform-github-config.git", submodules = true}
+"~/code/gjensidige/github-actions-runners" = {url = "https://github.com/gjensidige/github-actions-runners.git", submodules = true}
+"~/code/gjensidige/terraform-github-repo-credentials" = {url = "https://github.com/gjensidige/terraform-github-repo-credentials.git", submodules = true}

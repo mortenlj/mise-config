@@ -2,7 +2,6 @@
 [tools]
 # Kubernetes
 "aqua:kubectl" = "1.37.1"
-azure-kubelogin = "latest"
 kind = "latest"
 stern = "latest"
 kubectx = "latest"
@@ -32,7 +31,6 @@ rclone = "latest"
 "pipx:checkoutmanager" = "latest"
 "pipx:pgcli" = "latest"
 "pipx:litecli" = "latest"
-"pipx:mycli" = "latest"
 
 # Languages/runtimes/adjacent
 python = "latest"
