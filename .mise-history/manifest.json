@@ -107,6 +107,7 @@
     "home/.agents/skills/to-spec/agents": 509,
     "home/.agents/skills/wizard": 509,
     "home/.agents/skills/wizard/agents": 509,
-    "home/.ssh": 448
+    "home/.ssh": 448,
+    "home/.ssh/config.d": 509
   }
 }
