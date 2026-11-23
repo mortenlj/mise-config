@@ -15,3 +15,4 @@
 "~/code/gjensidige/platform-skills" = {url = "https://github.com/gjensidige/platform-skills.git", submodules = true}
 "~/code/gjensidige/gjcli" = {url = "https://github.com/gjensidige/gjcli.git", submodules = true}
 "~/code/gjensidige/terraform-common-aad" = {url = "https://github.com/gjensidige/terraform-common-aad.git", submodules = true}
+"~/code/gjensidige/terraform-azure-onboarding" = {url = "https://github.com/gjensidige/terraform-azure-onboarding.git", submodules = true}
