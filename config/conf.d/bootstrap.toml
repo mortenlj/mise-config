@@ -81,12 +81,13 @@ skip_if = "cat ~/.netrc | grep 'machine static.ibidem.no'"
 run = """#!/usr/bin/env bash
 bw login
 password=$(bw list items --url https://home.ibidem.no/images | jq -r '.[] | select(.name == "static.ibidem.no/images") | .login.password')
+touch ~/.netrc
+chmod u=rw,g=,o= ~/.netrc
 cat<<EOF >> ~/.netrc
 machine static.ibidem.no
   login tools
   password ${password}
 EOF
-chmod u=rw,g=,o= ~/.netrc
 """
 
 [tasks."bootstrap:ansible-playbook"]
