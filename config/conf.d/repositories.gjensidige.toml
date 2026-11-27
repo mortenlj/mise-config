@@ -19,3 +19,4 @@
 "~/code/gjensidige/terraform-github-config" = {url = "https://github.com/gjensidige/terraform-github-config.git", submodules = true}
 "~/code/gjensidige/github-actions-runners" = {url = "https://github.com/gjensidige/github-actions-runners.git", submodules = true}
 "~/code/gjensidige/terraform-github-repo-credentials" = {url = "https://github.com/gjensidige/terraform-github-repo-credentials.git", submodules = true}
+"~/code/gjensidige/platform-project-issues" = {url = "https://github.com/gjensidige/platform-project-issues.git", submodules = true}
