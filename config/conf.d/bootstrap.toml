@@ -86,6 +86,7 @@ machine static.ibidem.no
   login tools
   password ${password}
 EOF
+chmod u=rw,g=,o= ~/.netrc
 """
 
 [tasks."bootstrap:ansible-playbook"]
