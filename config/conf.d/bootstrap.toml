@@ -20,7 +20,7 @@ login_shell = "bash"
 "~/code/personal/ansible_roles" = { url = "git@github.com:mortenlj/ansible_roles.git", submodules = true }
 "~/code/personal/ansible" = { url = "git@github.com:mortenlj/ansible.git" }
 "~/code/personal/misc" = { url = "git@github.com:mortenlj/misc.git" }
-"~/code/personal/background-scripts" = { url = "git@github.com:mortenlj/misc.git" }
+"~/code/personal/background-scripts" = { url = "git@github.com:mortenlj/background-scripts.git" }
 "~/dotfiles" = { url = "git@github.com:mortenlj/dotfiles.git" }
 
 [bootstrap.directories."/usr/local/bin"]
